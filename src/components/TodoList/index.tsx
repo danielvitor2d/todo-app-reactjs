@@ -24,7 +24,7 @@ export default function TodoList({ todos, removeTodo, clickTodo }: TodoListProps
       <div className="w-full flex flex-col gap-5">
         {todos.map(
           todo => (
-            <TodoItem todo={todo} removeTodo={() => removeTodo(todo.id)} clickTodo={clickTodo} />
+            <TodoItem key={todo.id} todo={todo} removeTodo={() => removeTodo(todo.id)} clickTodo={clickTodo} />
           )
         )}
       </div>
